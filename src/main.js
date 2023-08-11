@@ -15,10 +15,9 @@ const newResults = new Set();
 const houses = [];
 const { CHAT_ID, BOT_API } = process.env;
 
-const urls = 'https://www.funda.nl/zoeken/huur?selected_area=%5B%22nl%22%5D&price=%22-1500%22&floor_area=%2275-%22&rooms=%222-%22&object_type=%5B%22house%22%5D';
+const urls = 'https://www.funda.nl/zoeken/huur?selected_area=%5B%22nl%22%5D&price=%22-1500%22&floor_area=%2275-%22&rooms=%222-%22&object_type=%5B%22house%22%5D/';
 
 const runTask = async () => {
-    #const urls = 'https://www.funda.nl/zoeken/huur?selected_area=%5B%22nl%22%5D&price=%22-1500%22&floor_area=%2275-%22&rooms=%222-%22&object_type=%5B%22house%22%5D/';
     for (const url of urls) {
         await runPuppeteer(url);
     }
